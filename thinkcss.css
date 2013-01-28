@@ -1,0 +1,98 @@
+body {
+  margin: 80px auto 10px auto;
+  max-width: 700px;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+em {
+  font-style: normal;
+  font-weight: 600; }
+
+p, span {
+  line-height: 1.618em; }
+
+p.intro {
+  color: #7f7f7f;
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-left: 5px solid #7f7f7f; }
+
+h1 {
+  font-size: 23px; }
+
+table {
+  border-spacing: 0; }
+  table.center {
+    margin-left: auto;
+    margin-right: auto; }
+
+td {
+  padding: 3px; }
+  td.total {
+    border-top: 1px solid black; }
+
+div.example {
+  width: 100%; }
+
+div.example:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+div.column50 {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 15px;
+  float: left; }
+
+div.column33 {
+  width: 31%;
+  margin-left: 1%;
+  margin-right: 1%;
+  float: left; }
+
+.example.inline_and_block_elements span {
+  background-color: #cccccc;
+  padding: 4px;
+  line-height: 28px; }
+.example.inline_and_block_elements p {
+  background-color: #cccccc;
+  padding: 4px;
+  margin: 0px 0px 5px 0px; }
+
+.example.element_nesting div span {
+  display: inline-block;
+  padding: 4px;
+  background-color: #f2f2f2; }
+  .example.element_nesting div span span {
+    background-color: #cccccc; }
+    .example.element_nesting div span span span {
+      background-color: #a5a5a5; }
+      .example.element_nesting div span span span span {
+        background-color: #7f7f7f; }
+  .example.element_nesting div span div {
+    background-color: #cccccc; }
+.example.element_nesting div div {
+  padding: 4px;
+  margin-bottom: 4px;
+  background-color: #f2f2f2; }
+  .example.element_nesting div div div {
+    background-color: #cccccc; }
+    .example.element_nesting div div div div {
+      background-color: #a5a5a5; }
+      .example.element_nesting div div div div div {
+        background-color: #7f7f7f; }
+  .example.element_nesting div div span {
+    background-color: #cccccc; }
+.example.element_nesting div div:last-child {
+  margin-bottom: 0px; }
+
+.example.cssboxmodel {
+  width: none;
+  border: 10px dotted black;
+  padding: 10px;
+  margin: 20px; }

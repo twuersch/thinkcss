@@ -1,0 +1,142 @@
+$graybase: 127;
+$graystep: 15%;
+$gray1: rgb($graybase, $graybase, $graybase);
+$gray2: lighten($gray1, $graystep);
+$gray3: lighten($gray2, $graystep);
+$gray4: lighten($gray3, $graystep);
+$gray5: lighten($gray4, $graystep);
+
+body {
+    margin: 80px auto 10px auto;
+    max-width: 700px;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+em {
+    font-style: normal;
+    font-weight: 600;
+}
+
+p, span {
+    line-height: 1.618em;
+}
+
+p.intro {
+    color: $gray1;
+    background-color: $gray4;
+    padding: 5px;
+    border-left: 5px solid $gray1;
+}
+
+h1 {
+    font-size: 23px;
+}
+
+table {
+    border-spacing: 0;
+    
+    &.center {
+        margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+td {
+    padding: 3px;
+    
+    &.total {
+        border-top: 1px solid rgb(0, 0, 0);
+    }
+}
+
+div.example {
+    width: 100%;
+}
+
+div.example:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+div.column50 {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 15px;
+    float: left;
+}
+
+div.column33 {
+    width: 31%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+.example.inline_and_block_elements {
+    span {
+        background-color: $gray3;
+        padding: 4px;
+        line-height: 28px;
+    }
+    
+    p {
+        background-color: $gray3;
+        padding: 4px;
+        margin: 0px 0px 5px 0px;
+    }
+}
+
+.example.element_nesting {
+    div {
+        span {
+            display: inline-block;
+            padding: 4px;
+            background-color: $gray4;
+            span {
+                background-color: $gray3;
+                span {
+                    background-color: $gray2;
+                    span {
+                        background-color: $gray1;
+                    }
+                }
+            }
+            div {
+                background-color: $gray3;
+            }
+        }
+        div {
+            padding: 4px;
+            margin-bottom: 4px;
+            background-color: $gray4;
+            div {
+                background-color: $gray3;
+                div {
+                    background-color: $gray2;
+                    div {
+                        background-color: $gray1;
+                    }
+                }
+            }
+            span {
+                background-color: $gray3;
+            }
+        }
+        div:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.example.cssboxmodel {
+    width: none;
+    border: 10px dotted black;
+    padding: 10px;
+    margin: 20px;
+}

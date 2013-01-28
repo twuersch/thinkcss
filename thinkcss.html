@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Think CSS</title>
+        <link rel="stylesheet" type="text/css" href="thinkcss.css" media="screen" />
+    </head>
+    
+    <body>
+        <p class="intro">This is supposed to be about <em>The Rules</em>, so that I’ll be able to reason about why the browser does what it does.</p>
+        
+        <h1>Rule #1: It's all about boxes.</h1>
+        <p>CSS and HTML lay everything out in boxes. While HTML creates these boxes of different types and says what's in these boxes, CSS is about how these boxes look and where they are on the screen.</p>
+        
+        <h1>Rule #2: Boxes are either placed inline next to each other, or as blocks on top of each other.</h1>
+        <p>Boxes, or more precisely called <em>elements</em> that are placed one after another, similar to letters, are called <em>inline elements</em>. At the end of the line, they wrap onto a new line. Elements that are placed on top of each other are called <em>block elements</em>. Each block element has its own line and expands to the entire available width. Each element has a default behavior which depends on its type, so it is either an inline or a block element by default.</p>
+        
+        <div class="example inline_and_block_elements">
+            <div class="column50">
+                <span>Spans</span> <span>are</span> <span>classical</span> <span>inline</span> <span>elements.</span> <span>They</span> <span>wrap</span> <span>if</span> <span>there's</span> <span>no</span> <span>more</span> <span>space</span> <span>left.</span>
+            </div> 
+            <div class="column50">
+                <p>Paragraphs are classical examples of block elements.</p>
+                <p>Each paragraph begins on a new line.</p>
+                <p>They use the full width available to them.</p>
+            </div>
+        </div>
+        
+        <h1>Rule #3: Block elements use the entire width.</h1>
+        <p>A block element always uses up the entire available width. It has a newline before and after it.</p>
+        
+        <h1>Rule #4: Elements can be nested.</h1>
+        <p>Any nesting is possible. This creates hierarchies of elements. However, it is not recommended to put block elements into inline elements.</p>
+        
+        <div class="example element_nesting">
+            <div class="column50">
+                <span><em>Inline Elements</em>, <span>e.g. <span>SPANs,</span> <span>can be nested </span></span><span>in any <span>way</span> possible.</span></span>
+            </div>
+            <div class="column50">
+                <div>
+                    <em>Block elements</em>, e.g. DIVs,
+                    <div>
+                        can also
+                        <div>
+                            be nested
+                        </div>
+                        <div>
+                            in
+                        </div>
+                        any
+                    </div>
+                    way possible.
+                </div>
+            </div>
+        </div>
+        <div class="example element_nesting">
+            <div class="column50">
+                <div>Block elements <span>can contain inline elements,</span> <span>no problem here.</span></div>
+            </div>
+            <div class="column50">
+                <span>Inline elements <div>can contain block elements,</div> <div>but that's not very</div>
+                useful.</span>
+            </div>
+        </div>
+        
+        <h1>Rule #5: A block element consists of content, padding, border and margin.</h1>
+        <p>This is called the <em>CSS box model</em>. The content is the innermost part. It is surrounded by padding, which separates the content from the border. The border is surrounded by a margin which separates it from the containing block.</p>
+        
+        <div class="example cssboxmodel">
+                I'm an example DIV. I have a 10px border, 20px margin, and 10px padding.
+        </div>
+        
+        <h1>Rule #6: The <code>width</code> and <code>height</code> properties apply to the contents only.</h1>
+        <p>They don't include padding, border nor margin, so the total width or height can be bigger.</p>
+        
+        <h1>Rule #7: The width of the containing box includes the content, padding, border and margin.</h1>
+        <table class="center">
+            <tr>
+                <td>&nbsp;</td>
+                <td>margin-left</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>border-left-width</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>padding-left</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>width</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>padding-right</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>border-right-width</td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>margin-right</td>
+            </tr>
+            <tr>
+                <td class="total">=</td>
+                <td class="total">containing box width</td>
+            </tr>
+        </table>
+        
+        <h1>Rule #8: Vertical margins of adjacent or nested elements may collapse.</h1>
+        <p>If we have two paragraphs next to each other with different margins, only the bigger vertical margin will show up. Nested elements behave similarly: Inner vertical margins collapse as long as there have no padding or border set. Horizontal margins don't collapse.</p>
+        
+        <h1>Rule #9: The background extends to the border</h1>
+        <p>It is beneath the content, the padding and the border, but it does not contain the margin. This applies to background colors and images alike.</p>
+    </body>
+</html>
